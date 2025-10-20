@@ -11,7 +11,8 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+import java.time.LocalDate
+import java.time.LocalTime
 
 
 class MainActivity : AppCompatActivity() {
@@ -50,7 +51,14 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initUI(){
+        // poner la hora
+        val fecha = LocalDate.now()
 
+        val dia = fecha.dayOfMonth
+        val mes = fecha.monthValue
+        val year = fecha.year
+
+        tvHora.text = "La fecha actual es ${dia.toString()}/${mes.toString()}/${year.toString()}"
     }
 
 }

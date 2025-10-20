@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.activdad_04_primeraparte"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
