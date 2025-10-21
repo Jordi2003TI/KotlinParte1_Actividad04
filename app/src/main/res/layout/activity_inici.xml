@@ -17,30 +17,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lyNombreYNumero"
         android:text="tu nombre es">
     </TextView>
 
-    <TextView
-        android:id="@+id/tvTextNumero"
-        android:layout_width="250dp"
+    <LinearLayout
+        android:id="@+id/lyNombreYNumero"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Escribe un numero de 1 al 3"
-        app:layout_constraintBottom_toTopOf="@+id/etNumeroPesnado"
-        app:layout_constraintTop_toBottomOf="@+id/tvImprimirNombre">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@+id/tvImprimirNombre"
+        app:layout_constraintBottom_toTopOf="@+id/btnsAtrasYEnviar"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvTextNumero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escribe un numero de 1 al 3"
+            android:layout_marginBottom="8dp">
+        </TextView>
+        <EditText
+            android:id="@+id/etNumeroPesnado"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+        </EditText>
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/etNumeroPesnado"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTextNumero"
-        app:layout_constraintBottom_toTopOf="@+id/btnsAtrasYEnviar">
-    </EditText>
 
 <LinearLayout
     android:id="@+id/btnsAtrasYEnviar"
@@ -49,7 +53,7 @@
     android:orientation="horizontal"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/etNumeroPesnado"
+    app:layout_constraintTop_toBottomOf="@id/lyNombreYNumero"
     app:layout_constraintBottom_toBottomOf="parent"
     android:gravity="center">
     <Button
@@ -61,15 +65,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvImprimirNombre"
-        android:layout_marginTop="24dp"
         android:layout_marginRight="16dp">
     </Button>
     <Button
         android:id="@+id/btnEnviarNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/send"
-        android:layout_marginTop="24dp">
+        android:text="@string/send">
     </Button>
 </LinearLayout>
 
